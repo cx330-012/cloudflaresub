@@ -170,6 +170,12 @@ curl "https://<worker>/sub/<id>?target=clash&token=<SUB_ACCESS_TOKEN>"
 
 ## 注意事项
 
+### Clash / Mihomo 分流
+
+Clash 格式订阅默认将 YouTube、Google 和 OpenAI 相关域名交给节点选择组，百度和匹配中国大陆地理数据的目标直连，其余流量交给节点选择组。客户端需使用规则模式，并有可用的 GeoSite 和 GeoIP 数据。地域规则不是完整的网站分类，使用者可以在客户端前置自定义规则覆盖默认行为。
+
+Shadowrocket 使用的原始节点订阅只包含节点，不包含这些 Clash 规则；请在 Shadowrocket 中单独配置分流。修改 Worker 后，重新部署并更新现有 Clash 订阅才能使用新规则，订阅记录仍需存在于 KV 中。
+
 - `src/worker.js` 当前是 KV 短链方案，不依赖 `SUB_LINK_SECRET`
 - 每条订阅记录默认保存 7 天（TTL）
 - Surge 导出当前仅包含 `vmess` / `trojan`
