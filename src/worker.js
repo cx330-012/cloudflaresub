@@ -351,6 +351,18 @@ function renderClash(nodes) {
     ...allGroupMembers,
     ``,
     `rules:`,
+    `  - DOMAIN-SUFFIX,youtube.com,节点选择`,
+    `  - DOMAIN-SUFFIX,youtu.be,节点选择`,
+    `  - DOMAIN-SUFFIX,googlevideo.com,节点选择`,
+    `  - DOMAIN-SUFFIX,ytimg.com,节点选择`,
+    `  - DOMAIN-SUFFIX,google.com,节点选择`,
+    `  - DOMAIN-SUFFIX,googleapis.com,节点选择`,
+    `  - DOMAIN-SUFFIX,gstatic.com,节点选择`,
+    `  - DOMAIN-SUFFIX,openai.com,节点选择`,
+    `  - DOMAIN-SUFFIX,chatgpt.com,节点选择`,
+    `  - DOMAIN-SUFFIX,baidu.com,DIRECT`,
+    `  - GEOSITE,CN,DIRECT`,
+    `  - GEOIP,CN,DIRECT`,
     `  - MATCH,节点选择`,
   ].join('\n');
 }

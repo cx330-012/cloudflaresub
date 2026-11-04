@@ -269,6 +269,18 @@ export function renderClashSubscription(nodes) {
   lines.push('    tolerance: 50');
   lines.push(`    proxies: [${proxyNames.map(yamlQuote).join(', ')}]`);
   lines.push('rules:');
+  lines.push('  - DOMAIN-SUFFIX,youtube.com,🚀 节点选择');
+  lines.push('  - DOMAIN-SUFFIX,youtu.be,🚀 节点选择');
+  lines.push('  - DOMAIN-SUFFIX,googlevideo.com,🚀 节点选择');
+  lines.push('  - DOMAIN-SUFFIX,ytimg.com,🚀 节点选择');
+  lines.push('  - DOMAIN-SUFFIX,google.com,🚀 节点选择');
+  lines.push('  - DOMAIN-SUFFIX,googleapis.com,🚀 节点选择');
+  lines.push('  - DOMAIN-SUFFIX,gstatic.com,🚀 节点选择');
+  lines.push('  - DOMAIN-SUFFIX,openai.com,🚀 节点选择');
+  lines.push('  - DOMAIN-SUFFIX,chatgpt.com,🚀 节点选择');
+  lines.push('  - DOMAIN-SUFFIX,baidu.com,DIRECT');
+  lines.push('  - GEOSITE,CN,DIRECT');
+  lines.push('  - GEOIP,CN,DIRECT');
   lines.push('  - MATCH,🚀 节点选择');
 
   return lines.join('\n') + '\n';
